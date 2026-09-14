@@ -15,8 +15,9 @@ from telegram.ext import (
 # НАСТРОЙКИ
 # ============================================================
 
-import os
 TOKEN = os.getenv("BOT_TOKEN")
+if not TOKEN:
+    raise RuntimeError("Не задана переменная BOT_TOKEN")
 
 
 # ============================================================
